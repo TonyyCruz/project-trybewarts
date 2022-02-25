@@ -1,6 +1,8 @@
 // Variaveis Globais
 const btnEntrar = document.querySelector('.btn-entrar');
-// const textArea = document.querySelector('#textarea');
+const agreement = document.querySelector('#agreement');
+const submitBtn = document.querySelector('#submit-btn');
+const textArea = document.querySelector('#textarea');
 
 // Funcoes
 
@@ -16,14 +18,24 @@ function verificaEmailSenha(event) {
   }
 }
 
-// function contador(event) {
-//   const divCounter = document.querySelector("#counter");
-//   let counter = 500;
-//   const numCarateres = event.target.value.length;
-//   counter -= numCarateres;
-// }
+function contador(event) {
+  const divCounter = document.querySelector("#counter");
+  let counter = 500;
+  const numCarateres = event.target.value.length;
+  counter -= numCarateres;
+}
 
 // Eventos
 
 btnEntrar.addEventListener('click', verificaEmailSenha);
-// textArea.addEventListener('keyup', contador);
+textArea.addEventListener('keyup', contador);
+
+function submit() {
+  if (agreement.checked === true) {
+    submitBtn.removeAttribute('disabled');
+  } else {
+    submitBtn.disabled = true;
+  }
+}
+
+agreement.addEventListener('click', submit);
