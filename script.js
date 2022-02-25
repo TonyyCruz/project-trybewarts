@@ -1,5 +1,6 @@
 // Variaveis Globais
 const btnEntrar = document.querySelector('.btn-entrar');
+// const textArea = document.querySelector('#textarea');
 
 // Funcoes
 
@@ -15,6 +16,14 @@ function verificaEmailSenha(event) {
   }
 }
 
+// function contador(event) {
+//   const divCounter = document.querySelector("#counter");
+//   let counter = 500;
+//   const numCarateres = event.target.value.length;
+//   counter -= numCarateres;
+// }
+
 // Eventos
 
 btnEntrar.addEventListener('click', verificaEmailSenha);
+// textArea.addEventListener('keyup', contador);
