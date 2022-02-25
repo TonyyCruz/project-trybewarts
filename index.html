@@ -24,6 +24,7 @@
         <input id="input-name" type="text" placeholder="Nome" >
         <input id="input-lastname" type="text" placeholder="Sobrenome">
       </div>
+
       <div class="container-emailCasa">
         <input id="input-email" type="email" placeholder="Email">
         <select name="" id="house">
@@ -33,11 +34,13 @@
           <option id="pytherina-house" value="Pytherina">Pytherina</option>
         </select>
       </div>
-      
 
-
-
-
+      <div>
+        <label id="label-family" for="family-name">Qual sua família?</label>
+        <input class="family-name" type="radio" name="family" value="Frontend">
+        <input class="family-name" type="radio" name="family" value="Backend">
+        <input class="family-name" type="radio" name="family" value="FullStack">
+      </div>
 
       <div class="avaliacao">
         <label id="label-rate" for="rate">Como você avalia a Trybewarts?</label>
@@ -52,15 +55,18 @@
           <input type="radio" name="rate" value="9" id="">9
           <input type="radio" name="rate" value="10" id="">10
       </div>
+
       <div class="container-textArea">
         <label class="textarea" for="textArea">Deixe seu comentário:</label>
         <textarea name="textArea" id="textarea" cols="30" rows="10" maxlength="500"></textarea>
       </div>
+
       <div class="container-checkbox">
         <label id="label-infos" for="">Você concorda com o uso das informações acima?</label>
         <input type="checkbox" name="" id="agreement">
         <div id="counter"></div>
       </div>
+      
     </form>
     <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg" alt="Imagem trybewarts">
   </main>
