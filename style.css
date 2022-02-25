@@ -46,3 +46,12 @@ main {
 .container-nomeSobrenome input {
   flex-grow: 1;
 }
+
+.container-emailCasa {
+  display: flex;
+  justify-content: space-around;
+}
+
+#house , #input-email {
+  flex-grow: 1;
+}
