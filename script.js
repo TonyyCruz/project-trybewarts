@@ -2,7 +2,7 @@
 const btnEntrar = document.querySelector('.btn-entrar');
 const agreement = document.querySelector('#agreement');
 const submitBtn = document.querySelector('#submit-btn');
-const textArea = document.querySelector('#textarea');
+// const textArea = document.querySelector('#textarea');
 
 // Funcoes
 
