@@ -55,3 +55,16 @@ main {
 #house , #input-email {
   flex-grow: 1;
 }
+
+.avaliacao {
+  display: flex;
+}
+
+.container-textArea {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-checkbox {
+  display: flex;
+}
