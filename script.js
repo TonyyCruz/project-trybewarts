@@ -2,7 +2,7 @@
 const btnEntrar = document.querySelector('.btn-entrar');
 const textArea = document.querySelector('#textarea');
 const divCounter = document.querySelector('#counter');
-const btnEnviar = document.querySelector('#agreement');
+// const btnEnviar = document.querySelector('#agreement');
 
 // Funcoes
 
@@ -31,10 +31,9 @@ function contador(event) {
 //   const nomeSobrenome = document.querySelector('#input-name').value + document.querySelector('#input-lastname').value;
 //   const email = document.querySelector('#input-email').value;
 //   const casa = document.querySelector('#house').value;
-//   const familia = 
+//   const familia =
 
 // }
-
 
 // function fixaInformacao(event) {
 //   event.preventDefault();
