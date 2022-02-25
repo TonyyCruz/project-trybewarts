@@ -30,6 +30,7 @@ function contador(event) {
 btnEntrar.addEventListener('click', verificaEmailSenha);
 textArea.addEventListener('keyup', contador);
 
+// verifica se o agreement esta marcado com check
 function submit() {
   if (agreement.checked === true) {
     submitBtn.removeAttribute('disabled');
@@ -37,5 +38,4 @@ function submit() {
     submitBtn.disabled = true;
   }
 }
-
 agreement.addEventListener('click', submit);
