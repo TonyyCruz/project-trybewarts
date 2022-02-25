@@ -30,6 +30,7 @@ main {
 
 #evaluation-form {
   display: flex;
-  max-width: 675px;
+  width: 675px;
+  flex-direction: column;
 }
 
