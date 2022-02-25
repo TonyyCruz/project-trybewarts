@@ -37,3 +37,12 @@ main {
 #trybewarts-forms-logo {
   height: 500px;
 }
+
+.container-nomeSobrenome {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-nomeSobrenome input {
+  flex-grow: 1;
+}
