@@ -2,7 +2,9 @@
 const btnEntrar = document.querySelector('.btn-entrar');
 const agreement = document.querySelector('#agreement');
 const submitBtn = document.querySelector('#submit-btn');
-// const textArea = document.querySelector('#textarea');
+const textArea = document.querySelector('#textarea');
+const divCounter = document.querySelector('#counter');
+divCounter.innerText = 500;
 
 // Funcoes
 
@@ -19,10 +21,10 @@ function verificaEmailSenha(event) {
 }
 
 function contador(event) {
-  const divCounter = document.querySelector("#counter");
   let counter = 500;
   const numCarateres = event.target.value.length;
   counter -= numCarateres;
+  divCounter.innerText = counter;
 }
 
 // Eventos

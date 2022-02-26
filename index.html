@@ -12,28 +12,33 @@
     <img src="images/trybewarts-header-logo.svg" class="trybewarts-header-logo" alt="logo-trybe">
     <h1 id="trybewarts-header-title">Trybewarts</h1>
     <form action="" class="trybewarts-login">
-      <input type="email" name="email" placeholder="Email" id="email">
-      <input type="password" name="password" placeholder="Senha" id="senha">
+      <input class="input-txt" type="email" name="email" placeholder="Email" id="email">
+      <input class="input-txt" type="password" name="password" placeholder="Senha" id="senha">
       <button type="submit" class="btn-entrar">Entrar</button>
     </form>
-
   </header>
+
   <main>
     <form id="evaluation-form" action="">
-      <div class="container-nomeSobrenome">
-        <input id="input-name" type="text" placeholder="Nome" >
-        <input id="input-lastname" type="text" placeholder="Sobrenome">
+      <div id="titulo-formulario">
+        <h2>Formulário de Avaliação</h2>
+        <div class="container-nomeSobrenome">
+          <input class="input-txt" id="input-name" type="text" placeholder="Nome" >
+          <input class="input-txt" id="input-lastname" type="text" placeholder="Sobrenome">
+        </div>
       </div>
 
       <div class="container-emailCasa">
-        <input id="input-email" type="email" placeholder="Email">
-        <select name="" id="house">
+        <input class="input-txt" id="input-email" type="email" placeholder="Email">
+        <label for="house">Casa: </label>
+        <select class="input-txt" name="" id="house">
           <option id="gitnoria-house" value="Gitnória">Gitnória</option>
           <option id="reactpuff-house" value="Reactpuff">Reactpuff</option>
           <option id="corvinode-house" value="Corvinode">Corvinode</option>
           <option id="pytherina-house" value="Pytherina">Pytherina</option>
         </select>
       </div>
+      <hr>
 
 
         <label id="label-family" for="">Qual sua família?</label>
@@ -77,11 +82,11 @@
         <div id="counter"></div>
       </div>
 
-      <button id="submit-btn" type="submit" disabled>Enviar</button>
+      <button  id="submit-btn" type="submit" disabled>Enviar</button>
     </form>
     <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg" alt="Imagem trybewarts">
   </main>
   <footer>Direitos reservados à Trybewarts©</footer>
   <script src="script.js"></script>
 </body>
-  </html>  
+</html> 
