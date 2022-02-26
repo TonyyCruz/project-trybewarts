@@ -4,7 +4,6 @@ const agreement = document.querySelector('#agreement');
 const submitBtn = document.querySelector('#submit-btn');
 const textArea = document.querySelector('#textarea');
 const divCounter = document.querySelector('#counter');
-divCounter.innerText = 500;
 
 // Funcoes
 

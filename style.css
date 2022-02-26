@@ -64,6 +64,7 @@ main {
   justify-content: space-around;
   margin-top: 30px;
 }
+
 .container-nomeSobrenome div {
   flex-direction: column;
   text-align: center;
@@ -92,18 +93,29 @@ main {
 
 .avaliacao {
   display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: space-between;
 }
 
 .container-textArea {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .container-checkbox {
   display: flex;
 }
 
-.btn-entrar{
+.container-textArea #counter {
+  position: absolute;
+  top: 80%;
+  right: 1%;
+
+}
+
+.btn-entrar {
   background-color: rgb(120, 40, 190);
   color: white;
   border-radius: 8px;
@@ -115,4 +127,40 @@ main {
 #submit-btn {
   background-color: rgb(120, 40, 190);
   border-radius: 5px;
+}
+
+.container-familiaVontaderAprender {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.container-familia {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.container-Aprender {
+  display: flex;
+  flex-direction: column;
+}
+
+#label-family {
+  margin-bottom: 10px;
+}
+
+.container-opcao {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 220px;
+  margin-top: 10px;
+}
+
+footer {
+  background-color: black;
+  text-align: center;
+  color: white;
+  padding: 10px;
 }
