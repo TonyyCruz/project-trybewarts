@@ -48,7 +48,6 @@ agreement.addEventListener('click', submit);
 // adiciona as observações <===
 function textareaValue() {
   const textValue = textArea.value;
-  console.log(textValue);
   textArea.value = '';
   textArea.innerHTML = '';
   return textValue;
@@ -90,14 +89,15 @@ function checkboxValue() {
 // adiciona dados a textarea <===
 function formContentGenerator(event) {
   event.preventDefault();
-  // const obsValue = textareaValue();
-  textArea.innerHTML = `Nome: ${takeForm[0].value} ${takeForm[1].value}`;
-  textArea.innerHTML += `  Email: ${takeForm[2].value}`;
-  textArea.innerHTML += `  Casa: ${takeForm[3].value}`;
-  textArea.innerHTML += `  Família: ${familyValue()}`;
-  textArea.innerHTML += `  Matérias: ${checkboxValue()}`;
-  textArea.innerHTML += `  Avaliação: ${avaliationValue()}`;
-  // textArea.innerHTML += `  Observações: ${obsValue}`;
+  const obsValue = textareaValue();
+  textArea.value = `Nome: ${takeForm[0].value} ${takeForm[1].value}`;
+  textArea.value += `  Email: ${takeForm[2].value}`;
+  textArea.value += `  Casa: ${takeForm[3].value}`;
+  textArea.value += `  Família: ${familyValue()}`;
+  textArea.value += `  Matérias: ${checkboxValue()}`;
+  textArea.value += `  Avaliação: ${avaliationValue()}`;
+  textArea.value += `  Observações: ${obsValue}`;
+  textArea.innerHTML = textArea.value;
 }
 
 submitBtn.addEventListener('click', formContentGenerator);
