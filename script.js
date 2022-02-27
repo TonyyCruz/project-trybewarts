@@ -6,6 +6,8 @@ const textArea = document.querySelector('#textarea');
 const divCounter = document.querySelector('#counter');
 const takeForm = document.querySelectorAll('.take');
 const checkbox = document.querySelectorAll('.subject');
+const familyName = document.querySelectorAll('.family-name');
+const avaliation = document.querySelectorAll('.avaliation');
 
 // Funcoes
 
@@ -33,7 +35,7 @@ function contador(event) {
 btnEntrar.addEventListener('click', verificaEmailSenha);
 textArea.addEventListener('keyup', contador);
 
-// verifica se o agreement esta marcado com check
+// verifica se o agreement esta marcado com check <===
 function submit() {
   if (agreement.checked === true) {
     submitBtn.removeAttribute('disabled');
@@ -43,22 +45,59 @@ function submit() {
 }
 agreement.addEventListener('click', submit);
 
+// adiciona as observações <===
+function textareaValue() {
+  const textValue = textArea.value;
+  console.log(textValue);
+  textArea.value = '';
+  textArea.innerHTML = '';
+  return textValue;
+}
+
+// retorna avaliação <===
+function avaliationValue() {
+  for (let i = 0; i < avaliation.length; i += 1) {
+    if (avaliation[i].checked === true) {
+      return avaliation[i].value;
+    }
+  }
+}
+
+// adiciona a família selecionada <===
+function familyValue() {
+  for (let i = 0; i < familyName.length; i += 1) {
+    if (familyName[i].checked === true) {
+      return familyName[i].value;
+    }
+  }
+}
+
+// retorna as checkbox que estao selecionadas(matérias) <===
 function checkboxValue() {
   let val = '';
   for (let i = 0; i < checkbox.length; i += 1) {
     if (checkbox[i].checked === true) {
-      val += ` ${checkbox[i].value}`;
+      if (val === '') {
+        val += `${checkbox[i].value}`;
+      } else {
+        val += `, ${checkbox[i].value}`;
+      }
     }
   }
   return val;
 }
 
+// adiciona dados a textarea <===
 function formContentGenerator(event) {
   event.preventDefault();
+  // const obsValue = textareaValue();
   textArea.innerHTML = `Nome: ${takeForm[0].value} ${takeForm[1].value}`;
   textArea.innerHTML += `  Email: ${takeForm[2].value}`;
   textArea.innerHTML += `  Casa: ${takeForm[3].value}`;
-  textArea.innerHTML += `  Matérias:${checkboxValue()}`;
+  textArea.innerHTML += `  Família: ${familyValue()}`;
+  textArea.innerHTML += `  Matérias: ${checkboxValue()}`;
+  textArea.innerHTML += `  Avaliação: ${avaliationValue()}`;
+  // textArea.innerHTML += `  Observações: ${obsValue}`;
 }
 
 submitBtn.addEventListener('click', formContentGenerator);
