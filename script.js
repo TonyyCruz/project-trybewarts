@@ -72,7 +72,8 @@ function familyValue() {
 }
 
 // retorna as checkbox que estao selecionadas(matérias) <===
-function checkboxValue() {
+// eslint-disable-next-line sonarjs/cognitive-complexity
+function chbox() {
   let val = '';
   for (let i = 0; i < checkbox.length; i += 1) {
     if (checkbox[i].checked === true) {
@@ -94,7 +95,7 @@ function formContentGenerator(event) {
   textArea.value += `  Email: ${takeForm[2].value}`;
   textArea.value += `  Casa: ${takeForm[3].value}`;
   textArea.value += `  Família: ${familyValue()}`;
-  textArea.value += `  Matérias: ${checkboxValue()}`;
+  textArea.value += `  Matérias: ${chbox()}`;
   textArea.value += `  Avaliação: ${avaliationValue()}`;
   textArea.value += `  Observações: ${obsValue}`;
   textArea.innerHTML = textArea.value;
