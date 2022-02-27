@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'MedievalSharp', cursive;
+  font-family: 'MedievalSharp';
   font-size: small;
 }
 
@@ -150,8 +150,8 @@ main {
 
 #submit-btn {
   background-color: rgb(120, 40, 190);
-  border-radius: 5px; 
-  font-weight: bolder;
+  border-radius: 5px;
+  font-weight: 700;
 }
 
 .container-familiaVontaderAprender {
