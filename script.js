@@ -72,18 +72,21 @@ function familyValue() {
 }
 
 // retorna as checkbox que estao selecionadas(matérias) <===
-// eslint-disable-next-line sonarjs/cognitive-complexity
 function chbox() {
-  let val = '';
+  let val = [];
   for (let i = 0; i < checkbox.length; i += 1) {
     if (checkbox[i].checked === true) {
-      if (val === '') {
-        val += `${checkbox[i].value}`;
-      } else {
-        val += `, ${checkbox[i].value}`;
-      }
+    //   if (val === '') {
+    //     val += `${checkbox[i].value}`;
+    //   } else {
+    //     val += `, ${checkbox[i].value}`;
+    //   }
+      val.push(`${checkbox[i].value}`);
     }
   }
+  val = val.join(', ');
+  val[val.length - 1] = ' ';
+  console.log(val);
   return val;
 }
 
