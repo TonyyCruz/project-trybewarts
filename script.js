@@ -4,6 +4,8 @@ const agreement = document.querySelector('#agreement');
 const submitBtn = document.querySelector('#submit-btn');
 const textArea = document.querySelector('#textarea');
 const divCounter = document.querySelector('#counter');
+const takeForm = document.querySelectorAll('.take');
+const checkbox = document.querySelectorAll('.subject');
 
 // Funcoes
 
@@ -40,3 +42,23 @@ function submit() {
   }
 }
 agreement.addEventListener('click', submit);
+
+function checkboxValue() {
+  let val = '';
+  for (let i = 0; i < checkbox.length; i += 1) {
+    if (checkbox[i].checked === true) {
+      val += ` ${checkbox[i].value}`;
+    }
+  }
+  return val;
+}
+
+function formContentGenerator(event) {
+  event.preventDefault();
+  textArea.value = `Nome: ${takeForm[0].value} ${takeForm[1].value}`;
+  textArea.value += `  Email: ${takeForm[2].value}`;
+  textArea.value += `  Casa: ${takeForm[3].value}`;
+  textArea.value += `  Matérias:${checkboxValue()}`;
+}
+
+submitBtn.addEventListener('click', formContentGenerator);

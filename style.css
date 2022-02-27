@@ -150,7 +150,8 @@ main {
 
 #submit-btn {
   background-color: rgb(120, 40, 190);
-  border-radius: 5px;
+  border-radius: 5px; 
+  font-weight: bolder;
 }
 
 .container-familiaVontaderAprender {
