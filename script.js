@@ -55,10 +55,10 @@ function checkboxValue() {
 
 function formContentGenerator(event) {
   event.preventDefault();
-  textArea.value = `Nome: ${takeForm[0].value} ${takeForm[1].value}`;
-  textArea.value += `  Email: ${takeForm[2].value}`;
-  textArea.value += `  Casa: ${takeForm[3].value}`;
-  textArea.value += `  Matérias:${checkboxValue()}`;
+  textArea.innerHTML = `Nome: ${takeForm[0].value} ${takeForm[1].value}`;
+  textArea.innerHTML += `  Email: ${takeForm[2].value}`;
+  textArea.innerHTML += `  Casa: ${takeForm[3].value}`;
+  textArea.innerHTML += `  Matérias:${checkboxValue()}`;
 }
 
 submitBtn.addEventListener('click', formContentGenerator);
